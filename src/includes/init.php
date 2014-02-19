@@ -9,7 +9,7 @@ ini_set('arg_separator.output', '&amp;');
 // Turn off magic quotes for security purpose
 ini_set('magic_quotes_runtime', 0);
 
-require_once(INC_PATH.'/fonctions.php');
+require_once(INC_PATH.'/functions.php');
 require_once(INC_PATH.'/page.class.php');
 require_once(INC_PATH.'/routing.class.php');
 
@@ -26,6 +26,8 @@ if(!$bdd){
 }
 
 unset($db);
+
+Routing::dispatch();
 
 // No messages to display
 if(!isset($_SESSION['errors'])){
