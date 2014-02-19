@@ -26,9 +26,13 @@ else {
 	// TODO: 404 html page
 }
 
+require_once(VIEWS_PATH.'/header.php');
+
 foreach(Page::$templates as $_template)
 {
 	require_once(VIEWS_PATH.'/'.Routing::GetModule().'/'.$_template);
 }
+
+require_once(VIEWS_PATH.'/footer.php');
 
 ?>
