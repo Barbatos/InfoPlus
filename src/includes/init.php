@@ -1,21 +1,19 @@
 <?php
 
-session_start();
-
-error_reporting(0);
-
-// On définit le charset et le timezone
+// Define the page charset and the timezone
 header('Content-Type: text/html; charset=UTF-8');
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('Europe/Paris');
 ini_set('arg_separator.output', '&amp;');
 
-// On force la désactivation des magic quotes
+// Turn off magic quotes for security purpose
 ini_set('magic_quotes_runtime', 0);
 
-require_once('fonctions.php');
+require_once(INC_PATH.'/fonctions.php');
+require_once(INC_PATH.'/page.class.php');
+require_once(INC_PATH.'/routing.class.php');
 
-// Connexion à la base de données
+// Database connection
 $db['user'] 	= "infoplus";
 $db['password'] = "infoplus";
 $db['dbname'] 	= "infoplus";
@@ -29,8 +27,7 @@ if(!$bdd){
 
 unset($db);
 
-// Pas de messages à afficher ? On initialise quand même 
-// les variables afin de ne pas avoir de notices de php.
+// No messages to display
 if(!isset($_SESSION['errors'])){
 	$_SESSION['errors'] = array();
 	$_SESSION['messages'] = array();
