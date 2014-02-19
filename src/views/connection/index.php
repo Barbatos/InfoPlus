@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" method="post" action=".">
   <fieldset>
 
 	<legend>Connection</legend>
@@ -26,3 +26,5 @@
 
   </fieldset>
 </form>
+
+<p><a href="/">Go back to the main page</a></p>
