@@ -295,3 +295,28 @@ function dateformat($dateheure, $datetime = 1)
 
 	return $final;
 }
+
+function mailto($dest, $exp, $subject, $msg)
+{
+	$headers = "From: \"InfoPlus\" <contact@infoplus.com>\n";
+	$headers .= "Reply-To: contact@infoplus.com\n";
+	$headers .= "Content-Type: text/plain; charset=\"iso-8859-1\"";
+	if(mail($dest, $subject, $msg, $headers)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+function genKey($nb)
+{
+	$list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789abcdefghijklmnopqrstuvwxyz";
+	$key = "";
+
+	for($i = 0; $i < $nb; $i++){
+		$key .= $list[rand(0, strlen($list)-1)];
+	}
+
+	return $key;
+}	
