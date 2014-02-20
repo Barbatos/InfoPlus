@@ -1,4 +1,4 @@
 <?php 
 
-Page::$title = "InfoPlus - Accueil";
+Page::$title = "InfoPlus";
 Page::$templates = array('index.php');

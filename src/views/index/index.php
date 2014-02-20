@@ -2,7 +2,9 @@
 if(is_connected()) {
 ?>
 
-hey buddy!
+hey buddy! <br />
+
+<a href="/logout/">Log out</a>
 
 <?php 
 }

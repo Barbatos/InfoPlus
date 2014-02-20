@@ -13,6 +13,17 @@ define('CONTROLLERS_PATH', BASEPATH.'/controllers');
 
 require_once(INC_PATH.'/init.php');
 
+if(Routing::GetModule() == 'logout') {
+	session_destroy();
+
+	$_SESSION = array();
+	$_COOKIE = array();
+
+	session_start();
+
+	message_redirect('You have been logged out. See you later!', '/', 1);
+}
+
 if(is_file($file = CONTROLLERS_PATH.'/'.Routing::GetModule().'.php')) {
 	if(is_file($file2 = MODELS_PATH.'/'.Routing::GetModule().'.php')) {
 		require_once($file2); 

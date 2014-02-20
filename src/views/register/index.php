@@ -68,3 +68,5 @@
 
   </fieldset>
 </form>
+
+<p><a href="/">Go back to the main page</a></p>
