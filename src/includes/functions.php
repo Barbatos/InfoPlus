@@ -207,11 +207,11 @@ function dateformat($dateheure, $datetime = 1)
 	{
 		if($datetime == 1)
 		{
-			return 'le '.date('d/m/Y à H\hi:s', $dateheure);
+			return 'on '.date('d/m/Y at H\hi:s', $dateheure);
 		}
 		elseif($datetime == 0)
 		{
-			return 'le '.date('d/m/Y', $dateheure);
+			return 'on '.date('d/m/Y', $dateheure);
 		}
 	}
 	elseif($faussedifference == 0) 
@@ -220,17 +220,17 @@ function dateformat($dateheure, $datetime = 1)
 		{
 			if($difference >= 4*60*60) 
 			{
-				$final = 'aujourd\'hui,';
+				$final = 'today,';
 			}
 			elseif($difference < 4*60*60) 
 			{
 				if($futur)
 				{
-					$final = 'dans ';
+					$final = 'in ';
 				}
 				else
 				{
-					$final = 'il y a ';
+					$final = '';
 				}
 				$heure = (int)($difference/(60*60));
 				$difference -= $heure*60*60;
@@ -253,40 +253,45 @@ function dateformat($dateheure, $datetime = 1)
 				{
 					$final .= $seconde.' s';
 				}
+
+				if(!$futur) {
+					$final .= ' ago';
+				}
+
 				return $final;
 			}
 		}
 		elseif($datetime == 0)
 		{
-			return 'aujourd\'hui';
+			return 'today';
 		}
 	}
 	elseif($faussedifference == 24*60*60 || $faussedifference == 24*60*60 + 3600 || $faussedifference == 24*60*60 - 3600) 
 	{
 		if($futur)
 		{
-			$final = 'demain,';
+			$final = 'tomorrow,';
 		}
 		else
 		{
-			$final = 'hier,';
+			$final = 'yesterday,';
 		}
 	}
 	elseif($faussedifference == 2*24*60*60 || $faussedifference == 2*24*60*60 + 3600 || $faussedifference == 2*24*60*60 - 3600) 
 	{
 		if($futur)
 		{
-			$final = 'après-demain,';
+			$final = 'in two days,';
 		}
 		else
 		{
-			$final = 'avant-hier,';
+			$final = 'two days ago,';
 		}
 	}
 	if($datetime == 1)
 	{
 
-		$final .= ' à '.date('H\hi:s', $dateheure);
+		$final .= ' at '.date('H\hi:s', $dateheure);
 	}
 	else
 	{
