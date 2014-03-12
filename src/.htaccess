@@ -34,7 +34,7 @@ FileETag none
 
 # Démarrage de l'URL Rewriting
 RewriteEngine on
-RewriteBase /
+RewriteBase /InfoPlus/
 
 Rewriterule ^index\.html$ / [QSA,L]
 Rewriterule ^([a-zA-Z0-9]+)\.html$ /$1/ [QSA,L,R=301]

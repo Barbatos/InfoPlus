@@ -10,7 +10,7 @@ define('INC_PATH', BASEPATH.'/includes');
 define('VIEWS_PATH', BASEPATH.'/views');
 define('MODELS_PATH', BASEPATH.'/models');
 define('CONTROLLERS_PATH', BASEPATH.'/controllers');
-define('WEBSITE_URL', '/');
+define('WEBSITE_URL', 'http://127.0.0.1/InfoPlus/');
 
 require_once(INC_PATH.'/init.php');
 
