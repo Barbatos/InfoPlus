@@ -21,7 +21,7 @@ if(P()) {
 		}
 
 		if($register->register()) {
-			message_redirect("You've successfully registered to InfoPlus! Welcome aboard.", '/', 1);
+			message_redirect("You've successfully registered to InfoPlus! You'll receive an email shortly containing a link to validate your registration.", '/', 1);
 		}
 		else {
 			message_redirect("There was an error processing your registration. Please try again.", '/register/');

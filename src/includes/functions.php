@@ -184,10 +184,10 @@ function is_connected(){
  */
 function dateformat($dateheure, $datetime = 1)
 {
-	if($dateheure == 0)
-	{
-		return 'jamais';
+	if($dateheure == 0){
+		return 'never';
 	}
+
 	$final = '';
 	$dateheurefausse = mktime(1, 0, 0, date('m', $dateheure), date('d', $dateheure), date('Y', $dateheure));
 	$fauxnow = mktime(1, 0, 0, date('m'), date('d'), date('Y'));
@@ -301,7 +301,7 @@ function dateformat($dateheure, $datetime = 1)
 	return $final;
 }
 
-function mailto($dest, $exp, $subject, $msg)
+function mailto($dest, $subject, $msg)
 {
 	$headers = "From: \"InfoPlus\" <contact@infoplus.com>\n";
 	$headers .= "Reply-To: contact@infoplus.com\n";
