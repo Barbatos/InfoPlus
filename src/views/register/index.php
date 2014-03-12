@@ -69,4 +69,4 @@
   </fieldset>
 </form>
 
-<p><a href="/">Go back to the main page</a></p>
+<p><a href="<?= WEBSITE_URL ?>">Go back to the main page</a></p>

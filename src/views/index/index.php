@@ -4,7 +4,7 @@ if(is_connected()) {
 
 hey buddy! <br />
 
-<a href="/logout/">Log out</a>
+<a href="<?= WEBSITE_URL ?>logout/">Log out</a>
 
 <?php 
 }
@@ -12,8 +12,8 @@ hey buddy! <br />
 else {
 ?>
 
-<a href="/connection/">Log In</a> <br />
-<a href="/register/">Register</a> <br />
+<a href="<?= WEBSITE_URL ?>connection/">Log In</a> <br />
+<a href="<?= WEBSITE_URL ?>register/">Register</a> <br />
 
 <?php 
 }
