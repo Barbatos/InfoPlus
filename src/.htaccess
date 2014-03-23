@@ -34,11 +34,11 @@ FileETag none
 
 # Démarrage de l'URL Rewriting
 RewriteEngine on
-RewriteBase /InfoPlus/
+RewriteBase /
 
 Rewriterule ^index\.html$ / [QSA,L]
 Rewriterule ^([a-zA-Z0-9]+)\.html$ /$1/ [QSA,L,R=301]
-Rewriterule ^([a-zA-Z0-9]+)$ /$1/ [QSA,L,R=301]
+Rewriterule ^([a-zA-Z0-9]+)$ index.php?arg1=$1 [QSA,L]
 
 RewriteRule ^([a-zA-Z0-9]+)\.html$ index.php?page=$1&index=$2 [QSA,L]
 RewriteRule ^([a-zA-Z0-9]+)/(index\.html)*$ index.php?page=$1&index=$2 [QSA,L]

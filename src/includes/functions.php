@@ -1,5 +1,12 @@
 <?php 
 
+function cutString($string, $maxSize) {
+	if(strlen($string) > $maxSize) {
+		$string = substr($string, 0, $maxSize).'...';
+	}
+	return $string;
+}
+
 function rewrite($name)
 {
 	$name = strtolower($name);
