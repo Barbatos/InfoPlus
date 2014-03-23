@@ -36,38 +36,38 @@
               <div id="logo">
                 <h1>InfoPlus</h1>
               </div>
-          
-            <!-- Nav -->
-              <nav id="nav">
-                <ul>
-                  <li class="current_page_item"><a href="#">Latest Post</a></li>
-                  <li><a href="#">Archives</a></li>
-                  <li><a href="#">About Me</a></li>
-                  <li><a href="#">Contact Me</a></li>
-                </ul>
-              </nav>
-
+            
             <!-- Search -->
               <section class="is-search">
                 <form method="post" action="#">
                   <input type="text" class="text" name="search" placeholder="Search" />
                 </form>
               </section>
-          
-            <!-- Text -->
-              <section class="is-text-style1">
-                <div class="inner">
-                  <p>
-                    <strong>Striped:</strong> A free and fully responsive HTML5 site
-                    template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 up!</a>
-                  </p>
-                </div>
-              </section>
+
+            <!-- Nav -->
+            <?php 
+            $stmt = $bdd->prepare('SELECT libelle from theme ORDER BY libelle ASC');
+            $stmt->execute();
+            $data = $stmt->fetchAll(PDO::FETCH_OBJ);
+            $stmt->closeCursor();
+            ?>
+              <nav id="nav">
+                <ul>
+                  <!-- class="current_page_item" -->
+                  <?php 
+                  foreach($data as $d) {
+                  ?>
+                  <li><a href="/<?= rewrite($d->libelle) ?>"><?= $d->libelle ?></a></li>
+                  <?php 
+                  }
+                  ?>
+                </ul>
+              </nav>
           
             <!-- Recent Posts -->
               <section class="is-recent-posts">
                 <header>
-                  <h2>Recent Posts</h2>
+                  <h2>Recent News</h2>
                 </header>
                 <ul>
                   <li><a href="#">Nothing happened</a></li>
@@ -75,18 +75,6 @@
                   <li><a href="#">The Meme Meme</a></li>
                   <li><a href="#">Now Full Cyborg</a></li>
                   <li><a href="#">Temporal Flux</a></li>
-                </ul>
-              </section>
-          
-            <!-- Recent Comments -->
-              <section class="is-recent-comments">
-                <header>
-                  <h2>Recent Comments</h2>
-                </header>
-                <ul>
-                  <li>case on <a href="#">Now Full Cyborg</a></li>
-                  <li>molly on <a href="#">Untitled Post</a></li>
-                  <li>case on <a href="#">Temporal Flux</a></li>
                 </ul>
               </section>
           
@@ -183,8 +171,6 @@
                 }
                 $_SESSION['messages'] = array();
               }
-
-              echo '<br /><br /><br /><div class="alert alert-success">derp derp</div>';
               ?>
 
               <!-- Post -->
