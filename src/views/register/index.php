@@ -1,72 +1,75 @@
-<form class="form-horizontal" method="post" action=".">
-  <fieldset>
+<article>
 
-    <!-- Form Name -->
-    <legend>Register</legend>
+  <header>
+    <h2><a href="#">Registration</a></h2>
+  </header>
 
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="forname">Forname</label>
-      <div class="controls">
-        <input id="forname" name="forname" type="text" placeholder="Robert" class="input-xlarge" required="">
-        
+  <form class="form-horizontal" method="post" action=".">
+    <fieldset>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="forname">Forname</label>
+        <div class="controls">
+          <input id="forname" name="forname" type="text" placeholder="Robert" class="input-xlarge" required="">
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="lastname">Lastname</label>
-      <div class="controls">
-        <input id="lastname" name="lastname" type="text" placeholder="De Niro" class="input-xlarge" required="">
-        
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="lastname">Lastname</label>
+        <div class="controls">
+          <input id="lastname" name="lastname" type="text" placeholder="De Niro" class="input-xlarge" required="">
+          
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="email">Email</label>
-      <div class="controls">
-        <input id="email" name="email" type="text" placeholder="test@example.com" class="input-xlarge" required="">
-        
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="email">Email</label>
+        <div class="controls">
+          <input id="email" name="email" type="text" placeholder="test@example.com" class="input-xlarge" required="">
+          
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="email2">Email Confirmation</label>
-      <div class="controls">
-        <input id="email2" name="email2" type="text" placeholder="test@example.com" class="input-xlarge" required="">
-        
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="email2">Email Confirmation</label>
+        <div class="controls">
+          <input id="email2" name="email2" type="text" placeholder="test@example.com" class="input-xlarge" required="">
+          
+        </div>
       </div>
-    </div>
 
-    <!-- Password input-->
-    <div class="control-group">
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <input id="password" name="password" type="password" placeholder="MySecuredPassword1337!" class="input-xlarge" required="">
-        
+      <!-- Password input-->
+      <div class="control-group">
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+          <input id="password" name="password" type="password" placeholder="MySecuredPassword1337!" class="input-xlarge" required="">
+          
+        </div>
       </div>
-    </div>
 
-    <!-- Password input-->
-    <div class="control-group">
-      <label class="control-label" for="password2">Password Confirmation</label>
-      <div class="controls">
-        <input id="password2" name="password2" type="password" placeholder="MySecuredPassword1337!" class="input-xlarge" required="">
-        
+      <!-- Password input-->
+      <div class="control-group">
+        <label class="control-label" for="password2">Password Confirmation</label>
+        <div class="controls">
+          <input id="password2" name="password2" type="password" placeholder="MySecuredPassword1337!" class="input-xlarge" required="">
+          
+        </div>
       </div>
-    </div>
 
-    <!-- Button -->
-    <div class="control-group">
-      <label class="control-label" for="register"></label>
-      <div class="controls">
-        <button id="register" name="register" class="btn btn-success">Register</button>
+      <!-- Button -->
+      <div class="control-group">
+        <label class="control-label" for="register"></label>
+        <div class="controls">
+          <br /><button id="register" name="register" class="button next">Register</button>
+        </div>
       </div>
-    </div>
 
-  </fieldset>
-</form>
+    </fieldset>
+  </form>
+</article>
 
 <p><a href="<?= WEBSITE_URL ?>">Go back to the main page</a></p>
