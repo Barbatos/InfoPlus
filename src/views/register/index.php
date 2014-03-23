@@ -1,7 +1,7 @@
 <article>
 
   <header>
-    <h2><a href="#">Registration</a></h2>
+    <h2><a href="#">Inscription</a></h2>
   </header>
 
   <form class="form-horizontal" method="post" action=".">
@@ -9,7 +9,7 @@
 
       <!-- Text input-->
       <div class="control-group">
-        <label class="control-label" for="forname">Forname</label>
+        <label class="control-label" for="forname">Prénom</label>
         <div class="controls">
           <input id="forname" name="forname" type="text" placeholder="Robert" class="input-xlarge" required="">
         </div>
@@ -17,7 +17,7 @@
 
       <!-- Text input-->
       <div class="control-group">
-        <label class="control-label" for="lastname">Lastname</label>
+        <label class="control-label" for="lastname">Nom</label>
         <div class="controls">
           <input id="lastname" name="lastname" type="text" placeholder="De Niro" class="input-xlarge" required="">
           
@@ -35,7 +35,7 @@
 
       <!-- Text input-->
       <div class="control-group">
-        <label class="control-label" for="email2">Email Confirmation</label>
+        <label class="control-label" for="email2">Confirmation</label>
         <div class="controls">
           <input id="email2" name="email2" type="text" placeholder="test@example.com" class="input-xlarge" required="">
           
@@ -44,18 +44,18 @@
 
       <!-- Password input-->
       <div class="control-group">
-        <label class="control-label" for="password">Password</label>
+        <label class="control-label" for="password">Mot de Passe</label>
         <div class="controls">
-          <input id="password" name="password" type="password" placeholder="MySecuredPassword1337!" class="input-xlarge" required="">
+          <input id="password" name="password" type="password" placeholder="azerty" class="input-xlarge" required="">
           
         </div>
       </div>
 
       <!-- Password input-->
       <div class="control-group">
-        <label class="control-label" for="password2">Password Confirmation</label>
+        <label class="control-label" for="password2">Confirmation</label>
         <div class="controls">
-          <input id="password2" name="password2" type="password" placeholder="MySecuredPassword1337!" class="input-xlarge" required="">
+          <input id="password2" name="password2" type="password" placeholder="azerty" class="input-xlarge" required="">
           
         </div>
       </div>
@@ -64,7 +64,7 @@
       <div class="control-group">
         <label class="control-label" for="register"></label>
         <div class="controls">
-          <br /><button id="register" name="register" class="button next">Register</button>
+          <br /><button id="register" name="register" class="button next">Inscription</button>
         </div>
       </div>
 
@@ -72,4 +72,4 @@
   </form>
 </article>
 
-<p><a href="<?= WEBSITE_URL ?>">Go back to the main page</a></p>
+<p><a href="<?= WEBSITE_URL ?>">Retour à l'accueil</a></p>

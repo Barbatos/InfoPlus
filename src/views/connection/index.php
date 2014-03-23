@@ -1,6 +1,6 @@
 <article>
 	<header>
-		<h2><a href="#">Connection</a></h2>
+		<h2><a href="#">Connexion</a></h2>
 	</header>
 
 	<form class="form-horizontal" method="post" action=".">
@@ -14,20 +14,20 @@
 		</div>
 
 		<div class="control-group">
-		  <label class="control-label" for="password">Password</label>
+		  <label class="control-label" for="password">Mot de Passe</label>
 		  <div class="controls">
-			<input id="password" name="password" type="password" placeholder="password" class="input-xlarge" required="">
+			<input id="password" name="password" type="password" placeholder="azerty" class="input-xlarge" required="">
 		  </div>
 		</div>
 
 		<div class="control-group">
 		  <label class="control-label" for="connect"></label>
 		  <div class="controls">
-		  	<br /><button id="connect" name="connect" class="button next">Log In</button>
+		  	<br /><button id="connect" name="connect" class="button next">Connexion</button>
 		  </div>
 		</div>
 
 	  </fieldset>
 	</form>
 </article>
-<p><a href="<?= WEBSITE_URL ?>">Go back to the main page</a></p>
+<p><a href="<?= WEBSITE_URL ?>">Retour à l'accueil</a></p>

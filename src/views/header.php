@@ -42,7 +42,7 @@
               if(is_connected()) {
               ?>
               Hey! :) <br />
-              <a href="<?= WEBSITE_URL ?>logout/">Logout</a>
+              <a href="<?= WEBSITE_URL ?>logout/">Déconnexion</a>
 
               <?php 
               }
@@ -50,8 +50,8 @@
               else {
               ?>
 
-              <a href="<?= WEBSITE_URL ?>connection/">Log In</a> <br />
-              <a href="<?= WEBSITE_URL ?>register/">Register</a> <br />
+              <a href="<?= WEBSITE_URL ?>connection/">Connexion</a> <br />
+              <a href="<?= WEBSITE_URL ?>register/">Inscription</a> <br />
 
               <?php 
               }
@@ -88,11 +88,11 @@
             <!-- Recent Posts -->
               <section class="is-recent-posts">
                 <header>
-                  <h2>Recent News</h2>
+                  <h2>Dernières actualités</h2>
                 </header>
                 <ul>
                   <?php 
-                  $stmt = $bdd->prepare('SELECT * FROM article ORDER BY dateAjout DESC');
+                  $stmt = $bdd->prepare('SELECT * FROM article ORDER BY dateAjout DESC LIMIT 8');
                   $stmt->execute();
                   $data = $stmt->fetchAll(PDO::FETCH_OBJ);
                   $stmt->closeCursor();
