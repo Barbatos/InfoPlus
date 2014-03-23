@@ -1,7 +1,10 @@
+<article>
+	<header>
+		<h2><a href="#">Connection</a></h2>
+	</header>
+
 <form class="form-horizontal" method="post" action=".">
   <fieldset>
-
-	<legend>Connection</legend>
 
 	<div class="control-group">
 	  <label class="control-label" for="email">Email</label>
@@ -20,11 +23,11 @@
 	<div class="control-group">
 	  <label class="control-label" for="connect"></label>
 	  <div class="controls">
-		<button id="connect" name="connect" class="btn btn-success">Log In</button>
+	  	<br /><button id="connect" name="connect" class="button next">Log In</button>
 	  </div>
 	</div>
 
   </fieldset>
 </form>
-
+</article>
 <p><a href="<?= WEBSITE_URL ?>">Go back to the main page</a></p>
