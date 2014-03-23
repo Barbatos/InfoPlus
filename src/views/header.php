@@ -46,7 +46,7 @@
 
             <!-- Nav -->
             <?php 
-            $stmt = $bdd->prepare('SELECT libelle from theme ORDER BY libelle ASC');
+            $stmt = $bdd->prepare('SELECT libelle from theme ORDER BY ordre ASC');
             $stmt->execute();
             $data = $stmt->fetchAll(PDO::FETCH_OBJ);
             $stmt->closeCursor();
