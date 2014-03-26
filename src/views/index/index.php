@@ -31,7 +31,7 @@ foreach($data as $d) {
     <?= cutString(nl2br($d->texte), 600) ?>
   </p>
   <p>
-  	<a href="/article/<?= rewrite($d->titre) ?>" class="button next">Lire la suite</a>
+  	<a href="/article/<?= rewrite($d->titre) ?>.html" class="button next">Lire la suite</a>
   </p>
 </article>
 

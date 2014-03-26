@@ -64,3 +64,5 @@ RewriteRule ^([a-zA-Z-]+)/([a-zA-Z-]+)-([0-9]+)(-[a-zA-Z0-9-]+)*\.html$ index.ph
 # Module + action
 RewriteRule ^([a-zA-Z-]+)/([a-zA-Z-]+)(-[a-zA-Z0-9-]+)*\.html$ index.php?page=$1&act=$2 [QSA,L]
 
+
+RewriteRule ^([a-zA-Z-]+)/([0-9]+)/([a-zA-Z-]+)(-[a-zA-Z0-9-]+)*\.html$ index.php?page=$1&id=$2&act=$3 [QSA,L]
