@@ -1,7 +1,7 @@
 <?php 
 
 if (!G('id')) {
-	redirect(null, '/', null);
+	message_redirect('Il manque un id à l\'article !', '/');
 }
 
 $article = getInfosArticle(G('id'));

@@ -110,7 +110,7 @@
 
                   foreach($data as $d) {
                   ?>
-                  <li><a href="/article/<?= rewrite($d->titre) ?>"><?= $d->titre ?></a></li>
+                  <li><a href="/article/<?= $d->id ?>/<?= rewrite($d->titre) ?>.html"><?= $d->titre ?></a></li>
                   <?php 
                   }
                   ?>

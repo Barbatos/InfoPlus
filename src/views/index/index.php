@@ -20,7 +20,7 @@ foreach($data as $d) {
 
 <article class="is-post is-post-excerpt">
   <header>
-    <h2><a href="#"><?= $d->titre ?></a></h2>
+    <h2><a href="/article/<?= $d->id ?>/<?= rewrite($d->titre) ?>.html"><?= $d->titre ?></a></h2>
     <span class="byline">Article publié sur <a href="http://<?= $d->site ?>" target="_blank"><?= $d->site ?></a></span>
   </header>
   <div class="info">
@@ -31,7 +31,7 @@ foreach($data as $d) {
     <?= cutString(nl2br($d->texte), 600) ?>
   </p>
   <p>
-  	<a href="/article/<?= rewrite($d->titre) ?>.html" class="button next">Lire la suite</a>
+  	<a href="/article/<?= $d->id ?>/<?= rewrite($d->titre) ?>.html" class="button next">Lire la suite</a>
   </p>
 </article>
 
