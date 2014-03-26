@@ -40,8 +40,19 @@
               <center>
               <?php 
               if(is_connected()) {
+
+              if($_SESSION['level'] < 2) {
               ?>
-              Hey! :) <br />
+              <a href="/premium/">Devenez Premium !</a><br />
+              <?php 
+              }
+              else {
+              ?>
+              Vous êtes Premium !<br />
+              <?php 
+              }
+              ?>
+
               <a href="<?= WEBSITE_URL ?>logout/">Déconnexion</a>
 
               <?php 
